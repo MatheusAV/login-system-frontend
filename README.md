@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+# LoginSystemFrontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Badge](https://img.shields.io/badge/Status-Concluído-green)
+![GitHub issues](https://img.shields.io/github/issues/SeuUsuario/LoginSystemFrontend)
+![GitHub stars](https://img.shields.io/github/stars/SeuUsuario/LoginSystemFrontend)
+![GitHub forks](https://img.shields.io/github/forks/SeuUsuario/LoginSystemFrontend)
 
-## Available Scripts
+## 📝 Descrição
 
-In the project directory, you can run:
+O **LoginSystemFrontend** é uma aplicação React moderna desenvolvida para consumir a API do LoginSystem e realizar autenticação de usuários utilizando JWT.
 
-### `npm start`
+A aplicação conta com:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Tela de login responsiva
+- Armazenamento e envio automático do token JWT
+- Proteção de rotas privadas (PrivateRoute)
+- Logout para remoção do token e retorno à tela de login
+- Design clean e responsivo com Material UI
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🚀 Funcionalidades
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Tela de Login**: Entrada de usuário e senha para autenticação
+- **Armazenamento de Token JWT**: Context API + LocalStorage para persistência
+- **Rotas Protegidas**: Somente usuários autenticados podem acessar determinadas páginas
+- **Logout**: Botão para deslogar e remover token
+- **UI Moderna com Material UI**: Inputs, Botões, Headers e Alertas estilizados
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📋 Pré-requisitos
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [Node.js 18+](https://nodejs.org/)
+- [NPM](https://www.npmjs.com/) ou [Yarn](https://yarnpkg.com/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🧰 Tecnologias Utilizadas
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- React 18
+- React Router DOM
+- Axios
+- Context API
+- Material UI (MUI)
+- Vite
+  
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🛠️ Configuração do Projeto
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Clone o repositório
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+git clone https://github.com/SeuUsuario/LoginSystemFrontend.git
+cd LoginSystemFrontend
+ ```
 
-## Learn More
+2. Instale as dependências do projeto:
+   ```bash
+   npm install
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. Configure a URL da API (se necessário):
+   ```json
+   baseURL: "http://localhost:5000/api"
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. Rode o projeto em modo desenvolvimento:
+   ```bash
+   npm run dev
+   ```
 
-### Code Splitting
+5. A aplicação estará disponível em::
+   ```bash
+    http://localhost:3000
+   ```
+## 📂 Estrutura do Projeto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```plaintext
+login-system-frontend/
+├── public/                        # Arquivos públicos
+├── src/
+│   ├── api/                       # API Client (Axios + Token)
+│   ├── auth/                      # AuthContext + Hooks
+│   ├── components/                # Componentes reutilizáveis (Header)
+│   ├── pages/                     # Páginas (Login, Success, Dashboard)
+│   ├── routes/                    # PrivateRoute (Proteção de rotas)
+│   ├── App.jsx                    # Rotas principais
+│   └── main.jsx                   # Ponto de entrada
+├── .gitignore
+└── package.json
+```
+---
